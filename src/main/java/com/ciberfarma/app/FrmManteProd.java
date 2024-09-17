@@ -200,7 +200,9 @@ public class FrmManteProd extends JFrame {
 			em.persist(p); //para guardar
 			System.out.println("Registro ok");
 			em.getTransaction().commit();
+			txtSalida.setText("Producto registrado correctamente");
 		} catch (Exception e){
+			txtSalida.setText("Error al regitrar producto");
 			System.out.println("Error al registrar: " + e.getMessage());
 		}
 	}
